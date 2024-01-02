@@ -56,12 +56,17 @@ Here is the steps need to start your next project.
     docker-compose up -d
     ```
 5. **Alternatively, you can first build and the run the container:** 
-    ```bash
-    docker-compose build
-    ```
    ```bash
-    docker-compose up -d
-    ```
+   docker-compose build
+   ```
+   ```bash
+   docker-compose up -d
+   ```
+6. **For the last, we need to install the Laravel and packages dependencies:**
+   ```bash
+   docker compose run laravel composer install
+   ```
+
 ****
 
 ### With everything done, we can execute our Laravel's container and run some Laravel code:
