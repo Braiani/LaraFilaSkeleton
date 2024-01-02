@@ -95,13 +95,14 @@ The default credentials are:
 
 ## 📦 What we use here:
 
-![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+* [![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
+* [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+* [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+* [FilamentPHP](https://filamentphp.com/)
 
 ## 👷 Author
 
-1. **Felipe Braiani** - *Developer* - [Braiani](https://github.com/Braiani)
+1. **Felipe Braiani** - *Developer/[CEO of BR tech Sistemas](https://brtechsistemas.com.br/)* - [Braiani](https://github.com/Braiani)
 
 ## 📄 License
 
