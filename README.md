@@ -1,66 +1,117 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Logo do projeto](https://i.imgur.com/pUTXM4h.png)
 
-## About Laravel
+# LaraFilaSkeleton
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This repository is a Skeleton of the Latest Laravel with FilamentPHP and docker.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🔥 Introduction
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+This repository aim to speed up the time to start new projects that is built upon Docker, Laravel and FilamentPHP.
 
-## Learning Laravel
+You'll need just some quick steps to focus on what matters, `coding!` 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### ⚙️ Prerequisites
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+You'll just need the follow technologies:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Git
+- Docker
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🔨 How to Start
 
-### Premium Partners
+Here is the steps need to start your next project.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. **First, let's clone the repository:**
+    ```bash
+    git clone https://github.com/Braiani/LaraFilaSkeleton.git project-name
+    ```
+    ```bash
+    cd project-name
+    ```
+    Remember to change the `prject-name` with the name of your project
+2. **After clone, it's time to remove the git folder of the LaraFilaSkeleton:**
 
-## Contributing
+    ```bash
+    sudo rm -R .git/
+    sudo rm -R .github/
+    ```
+3. **Now, let's copy the `.env.default` file:**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```bash
+    cp .env.default .env
+    ```
+    Edit the new `.env` file as you need, we recommend you to change the following variables:
+    * APP_NAME
+    * APP_URL
+    * APP_LOCALE
+    * APP_TIMEZONE
+    * DB_DATABASE
+    * DB_USERNAME
+    * DB_PASSWORD
 
-## Code of Conduct
+4. **After edit the fields you judge necessary, it's time to build and run the containers:**
+    ```bash
+    docker-compose up -d
+    ```
+5. **Alternatively, you can first build and the run the container:** 
+    ```bash
+    docker-compose build
+    ```
+   ```bash
+    docker-compose up -d
+    ```
+****
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### With everything done, we can execute our Laravel's container and run some Laravel code:
 
-## Security Vulnerabilities
+1. **First, let's jump into the container:**
+    ```bash
+    docker exec -it laravel_project-name /bin/bash
+    ```
+    Ps: The name after the `-it` is the Laravel's container name, by default it's the following: `laravel_LaraFilaSkeleton`.
+2. **When inside the container, we need to generate the key, migrate the database and seed with the Admin user:**
+    ```bash
+    php artisan key:generate
+    ``` 
+    ```bash
+    php artisan migrate --seed
+    ``` 
+****
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+That's all we need.
 
-## License
+Now, just go to localhost and make sure everything is running ok!
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Try accessing the admin area [http://localhost/admin](http://localhost/admin)
+
+The default credentials are:
+
+- e-mail: `admin@admin.com`
+- password: `password`
+
+****
+
+## 📦 What we use here:
+
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## 👷 Author
+
+1. **Felipe Braiani** - *Developer* - [Braiani](https://github.com/Braiani)
+
+## 📄 License
+
+This repository is licensed under MIT License, you can see more details on [LICENSE.md](https://github.com/link_da_licenca).
+
+
+## 💡 Support
+
+* If you want to support the project, you can either open an PR or e-mail me [felipe@brtechsistemas.com.br](mailto:felipe@brtechsistemas.com.br).
+* Connect with me on my linkedIn [Felipe Braiani](https://www.linkedin.com/in/felipe-gustavo-braiani-santos/)
+
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/felipebraiani)
+[![Github-sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/Braiani)
